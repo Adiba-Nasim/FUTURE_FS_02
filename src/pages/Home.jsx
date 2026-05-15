@@ -172,7 +172,7 @@ export default function Home() {
         </div>
       </section>
 
-    <Footer id="contact" />  
+    <Footer id="footer" />  
 
       {/* WhatsApp Float */}
       <a href="https://wa.me/8521300000" className="whatsapp-float" target="_blank" rel="noopener noreferrer">

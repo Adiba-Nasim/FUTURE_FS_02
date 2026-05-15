@@ -15,6 +15,18 @@ export default function Navbar() {
     navigate('/')
   }
 
+  const handleScrollLink = (e, sectionId) => {
+    e.preventDefault()
+    if (window.location.pathname === '/') {
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' })
+    } else {
+      navigate('/')
+      setTimeout(() => {
+        document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' })
+      }, 300)
+    }
+  }
+
   return (
     <nav className="navbar">
       <Link to="/" className="nav-logo">
@@ -27,24 +39,9 @@ export default function Navbar() {
 
       <div className="nav-links">
         <Link to="/menu">Menu</Link>
-        <Link to="/#how-it-works" onClick={(e) => {
-          if (window.location.pathname === '/') {
-            e.preventDefault()
-            document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })
-          }
-        }}>How it Works</Link>
-        <Link to="/#about" onClick={(e) => {
-          if (window.location.pathname === '/') {
-            e.preventDefault()
-            document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })
-          }
-        }}>Our Story</Link>
-        <Link to="/footer" onClick={(e) => {
-          if (window.location.pathname === '/') {
-            e.preventDefault()
-            document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
-          }
-        }}>Contact</Link>
+        <a href="#how-it-works" onClick={(e) => handleScrollLink(e, 'how-it-works')}>How it Works</a>
+        <a href="#about" onClick={(e) => handleScrollLink(e, 'about')}>Our Story</a>
+        <a href="#footer" onClick={(e) => handleScrollLink(e, 'footer')}>Contact</a>
         {(role === 'cook' || role === 'delivery' || role === 'admin') && (
           <Link to={
             role === 'cook' ? '/cook/dashboard' :
@@ -57,7 +54,6 @@ export default function Navbar() {
       <div className="nav-actions">
         {user ? (
           <div className="nav-user">
-            {/* Profile link — visible to all logged-in users */}
             <Link to="/profile" className="nav-profile-link" title="My Profile">
               <User size={16} />
               <span className="nav-username">
