@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Check, X, Clock, Loader2, Package } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import { useAuthStore } from '../store/authStore'
-import './CookDashboard.css'
+import './Cookdashboard.css'
 import {
   fetchCookOrders,
   fetchCookProfile,

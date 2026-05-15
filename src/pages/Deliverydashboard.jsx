@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { MapPin, Phone, Navigation, Loader2 } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import { useAuthStore } from '../store/authStore'
-import './DeliveryDashboard.css'
+import './Deliverydashboard.css'
 import {
   fetchReadyOrders,
   acceptOrder,
