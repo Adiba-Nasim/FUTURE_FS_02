@@ -12,7 +12,7 @@ export default function Footer({ id }) {
           </div>
         </div>
         <div className="footer-col">
-          <div className="footer-col-title">Menu</div>
+          <div className="footer-col-title">-Menu-</div>
           <Link to="/menu">Full Thali</Link>
           <Link to="/menu">Comfort Tiffin</Link>
           <Link to="/menu">Non-Veg Special</Link>
@@ -20,7 +20,7 @@ export default function Footer({ id }) {
           <Link to="/menu">Student Saver</Link>
         </div>
         <div className="footer-col">
-          <div className="footer-col-title">Company</div>
+          <div className="footer-col-title">-Company-</div>
          <Link to="/#about" onClick={(e) => {
           if (window.location.pathname === '/') {
             e.preventDefault()
@@ -31,7 +31,7 @@ export default function Footer({ id }) {
           <Link to="/login">Join as a Cook</Link>
         </div>
         <div className="footer-col">
-          <div className="footer-col-title">Support</div>
+          <div className="footer-col-title">-Contact-</div>
           <a href="https://wa.me/8521300000">WhatsApp Chat</a>
           <a href="mailto:hello@motherstouchtiffin.com">Mail Us</a>
           <Link to="/menu">Subscription Plans--To Be Added Soon :)</Link>

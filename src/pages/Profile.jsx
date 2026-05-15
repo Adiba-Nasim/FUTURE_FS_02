@@ -90,7 +90,7 @@ function RatingModal({ order, onClose, onSubmit }) {
         {order.cook_id && (
           <div style={{ marginBottom: '20px' }}>
             <div style={{ fontSize: '13px', fontWeight: 600, color: '#7a5a2a', marginBottom: '8px' }}>
-              👩‍🍳 Rate the Cook
+              Rate the Cook
             </div>
             <StarRating value={cookRating} onChange={setCookRating} />
           </div>
