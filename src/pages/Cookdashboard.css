@@ -1,0 +1,356 @@
+.cook-dashboard {
+  min-height: 100vh;
+  background: var(--cream);
+}
+
+.dashboard-container {
+  padding-top: 5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.dashboard-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.3rem;
+}
+
+.welcome-text {
+  font-size: 15px;
+  color: var(--text-mid);
+}
+
+.cook-stats {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.stat-box {
+  background: var(--white);
+  border: 1px solid rgba(92,58,30,0.1);
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  min-width: 100px;
+}
+
+.stat-value {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--saffron);
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.orders-section {
+  margin-bottom: 3rem;
+}
+
+.orders-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+}
+
+.orders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.order-card {
+  background: var(--white);
+  border: 1px solid rgba(92,58,30,0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.order-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(92,58,30,0.12);
+}
+
+.order-card.pending {
+  border-left: 4px solid var(--saffron);
+}
+
+.order-card.active {
+  border-left: 4px solid var(--green);
+}
+
+.order-card.ready {
+  border-left: 4px solid var(--green-light);
+}
+
+.order-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.order-id {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-dark);
+  font-family: 'Nunito Sans', monospace;
+}
+
+.order-status-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.order-status-badge.pending {
+  background: var(--saffron-pale);
+  color: var(--saffron);
+}
+
+.order-status-badge.active {
+  background: var(--green-pale);
+  color: var(--green);
+}
+
+.order-status-badge.ready {
+  background: var(--green-pale);
+  color: var(--green-light);
+}
+
+.order-details {
+  margin-bottom: 1.2rem;
+}
+
+.customer-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.order-items {
+  font-size: 14px;
+  color: var(--text-mid);
+  margin-bottom: 8px;
+}
+
+.order-amount {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--saffron);
+}
+
+.order-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.order-actions button {
+  flex: 1;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.2s;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.btn-accept {
+  background: var(--green);
+  color: white;
+}
+
+.btn-accept:hover {
+  background: var(--green-light);
+}
+
+.btn-reject {
+  background: var(--cream);
+  color: var(--text-mid);
+  border: 1px solid rgba(92,58,30,0.2);
+}
+
+.btn-reject:hover {
+  background: #f0e0c8;
+}
+
+.btn-mark-ready {
+  background: var(--saffron);
+  color: white;
+}
+
+.btn-mark-ready:hover {
+  background: var(--brown);
+}
+
+.waiting-pickup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-light);
+  padding: 10px;
+  background: var(--cream);
+  border-radius: 6px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--white);
+  border: 1px solid rgba(92,58,30,0.1);
+  border-radius: 12px;
+}
+
+.empty-icon {
+  font-size: 64px;
+  margin-bottom: 1rem;
+}
+
+.empty-state h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.empty-state p {
+  font-size: 14px;
+  color: var(--text-light);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 2rem 1rem;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dashboard-header h1 {
+    font-size: 28px;
+  }
+
+  .cook-stats {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .stat-box {
+    min-width: 80px;
+    padding: 0.8rem 1rem;
+  }
+
+  .orders-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Tabs */
+.dashboard-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0;
+}
+
+.dashboard-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #888;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.dashboard-tab.active {
+  color: #e67e22;
+  border-bottom-color: #e67e22;
+}
+
+.tab-badge {
+  background: #e67e22;
+  color: #fff;
+  border-radius: 20px;
+  padding: 1px 8px;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.tab-badge.muted {
+  background: #ddd;
+  color: #555;
+}
+
+/* Order meta row */
+.order-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.order-zone {
+  font-size: 0.78rem;
+  color: #888;
+}
+
+.order-date {
+  font-size: 0.75rem;
+  color: #aaa;
+  margin-top: 4px;
+}
+
+/* Delivered card */
+.order-card.delivered {
+  border-left: 4px solid #1e9e5a;
+  opacity: 0.85;
+}
+
+.order-status-badge.delivered {
+  background: #e6f9f0;
+  color: #1e9e5a;
+}

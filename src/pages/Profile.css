@@ -1,0 +1,544 @@
+.profile-page {
+  min-height: 100vh;
+  background: #fdf8f0;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-container {
+  flex: 1;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+  width: 100%;
+}
+
+/* ── Header card ──────────────────────────────────────────────────────────── */
+.profile-header-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 28px 28px;
+  box-shadow: 0 2px 16px rgba(196, 137, 26, 0.08);
+  margin-bottom: 28px;
+  border: 1px solid #f0e8d4;
+}
+
+.profile-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #d4a857, #c4891a);
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  letter-spacing: 0.02em;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-name {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2c1a0e;
+  margin: 0 0 4px;
+}
+
+.profile-email {
+  font-size: 14px;
+  color: #9c7c4a;
+  margin: 0;
+}
+
+.signout-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  border: 2px solid #f0e0c4;
+  border-radius: 10px;
+  background: transparent;
+  color: #9c7c4a;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.signout-btn:hover {
+  border-color: #e05a3a;
+  color: #e05a3a;
+}
+
+/* ── Tabs ─────────────────────────────────────────────────────────────────── */
+.profile-tabs {
+  display: flex;
+  gap: 4px;
+  background: #fff;
+  border-radius: 14px;
+  padding: 6px;
+  margin-bottom: 24px;
+  border: 1px solid #f0e8d4;
+  box-shadow: 0 2px 8px rgba(196, 137, 26, 0.06);
+}
+
+.profile-tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  color: #9c7c4a;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.profile-tab.active {
+  background: #d4a857;
+  color: #fff;
+}
+
+.profile-tab:hover:not(.active) {
+  background: #faf0e0;
+  color: #2c1a0e;
+}
+
+/* ── Tab content ──────────────────────────────────────────────────────────── */
+.tab-content {
+  background: #fff;
+  border-radius: 20px;
+  padding: 24px;
+  border: 1px solid #f0e8d4;
+  box-shadow: 0 2px 16px rgba(196, 137, 26, 0.06);
+}
+
+/* ── States ───────────────────────────────────────────────────────────────── */
+.loading-state {
+  text-align: center;
+  padding: 40px;
+  color: #9c7c4a;
+  font-style: italic;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 50px 20px;
+  color: #9c7c4a;
+}
+
+.empty-state svg {
+  color: #d4a857;
+  margin-bottom: 16px;
+  opacity: 0.6;
+}
+
+.empty-state h3 {
+  font-size: 18px;
+  color: #2c1a0e;
+  margin: 0 0 8px;
+}
+
+.empty-state p {
+  font-size: 14px;
+  margin: 0 0 24px;
+}
+
+.empty-state .primary-btn {
+  display: inline-flex;
+  width: auto;
+}
+
+/* ── Order cards ──────────────────────────────────────────────────────────── */
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.order-card {
+  border: 1.5px solid #f0e8d4;
+  border-radius: 16px;
+  padding: 18px 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #faf6ef;
+}
+
+.order-card:hover {
+  border-color: #d4a857;
+  background: #fef9f0;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(196, 137, 26, 0.1);
+}
+
+.order-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.order-card-id {
+  font-size: 15px;
+  font-weight: 700;
+  color: #2c1a0e;
+}
+
+.order-card-date {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #9c7c4a;
+  margin-top: 4px;
+}
+
+.status-badge {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  text-transform: capitalize;
+  letter-spacing: 0.02em;
+}
+
+.order-card-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.order-item-pill {
+  font-size: 12px;
+  background: #fff;
+  border: 1px solid #e8d5b0;
+  border-radius: 20px;
+  padding: 4px 10px;
+  color: #5a3a1a;
+  font-weight: 500;
+}
+
+.order-item-pill.more {
+  color: #9c7c4a;
+  border-style: dashed;
+}
+
+.order-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid #f0e8d8;
+}
+
+.order-card-total {
+  font-size: 17px;
+  font-weight: 700;
+  color: #c4891a;
+}
+
+.order-card-link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #d4a857;
+  transition: gap 0.2s ease;
+}
+
+.order-card:hover .order-card-link {
+  gap: 8px;
+}
+
+/* ── Address cards ────────────────────────────────────────────────────────── */
+.addresses-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.addr-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 18px;
+  background: #faf6ef;
+  border: 1.5px solid #f0e8d4;
+  border-radius: 14px;
+}
+
+.addr-icon {
+  color: #d4a857;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.addr-body {
+  flex: 1;
+}
+
+.addr-label-text {
+  font-size: 14px;
+  font-weight: 700;
+  color: #2c1a0e;
+  margin-bottom: 4px;
+}
+
+.addr-full-text {
+  font-size: 13px;
+  color: #5a3a1a;
+  line-height: 1.5;
+}
+
+.addr-zone-tag {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 11px;
+  background: #e8d5b0;
+  color: #7a5a2a;
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.addr-remove-btn {
+  background: transparent;
+  border: none;
+  color: #c0392b;
+  cursor: pointer;
+  padding: 4px;
+  opacity: 0.5;
+  transition: opacity 0.2s ease;
+}
+
+.addr-remove-btn:hover {
+  opacity: 1;
+}
+
+/* ── Add address form ─────────────────────────────────────────────────────── */
+.add-addr-form {
+  background: #faf6ef;
+  border: 1.5px dashed #d4a857;
+  border-radius: 14px;
+  padding: 20px;
+  margin-top: 4px;
+}
+
+.add-addr-form h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #2c1a0e;
+  margin: 0 0 16px;
+}
+
+.addr-form-btns {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.add-addr-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px;
+  border: 2px dashed #d4a857;
+  border-radius: 12px;
+  background: transparent;
+  color: #d4a857;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.add-addr-btn:hover {
+  background: #fef9f0;
+}
+
+/* ── Shared form elements ─────────────────────────────────────────────────── */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #7a5a2a;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #e8d5b0;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #2c1a0e;
+  background: #fff;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #d4a857;
+  box-shadow: 0 0 0 3px rgba(212, 168, 87, 0.12);
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+/* Shared button styles (same as Order.css for consistency) */
+.primary-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 22px;
+  background: #d4a857;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.primary-btn:hover {
+  background: #c4891a;
+}
+
+.primary-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.secondary-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 18px;
+  background: transparent;
+  color: #9c7c4a;
+  border: 2px solid #e8d5b0;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.secondary-btn:hover {
+  border-color: #d4a857;
+  color: #2c1a0e;
+}
+
+@media (max-width: 600px) {
+  .profile-header-card {
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+  .profile-container {
+    padding: 20px 16px 48px;
+  }
+}
+/* ── Worker info list ─────────────────────────────────────────────────────── */
+.worker-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.worker-info-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 4px;
+  border-bottom: 1px solid #f0e8d4;
+}
+
+.worker-info-row:last-child {
+  border-bottom: none;
+}
+
+.worker-info-icon {
+  color: #d4a857;
+  flex-shrink: 0;
+}
+
+.worker-info-label {
+  font-size: 14px;
+  color: #9c7c4a;
+  font-weight: 600;
+  width: 120px;
+  flex-shrink: 0;
+}
+
+.worker-info-value {
+  font-size: 15px;
+  color: #2c1a0e;
+  font-weight: 500;
+}
+
+/* ── Rate button ──────────────────────────────────────────────────────────── */
+.rate-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  background: #fff8e6;
+  color: #c4891a;
+  border: 1.5px solid #e8c97a;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.01em;
+}
+
+.rate-btn:hover {
+  background: #d4a857;
+  color: #fff;
+  border-color: #d4a857;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(196, 137, 26, 0.25);
+}
+
+.rate-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.rate-btn svg {
+  flex-shrink: 0;
+}

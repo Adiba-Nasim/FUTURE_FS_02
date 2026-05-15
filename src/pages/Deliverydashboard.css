@@ -1,0 +1,251 @@
+.delivery-dashboard {
+  min-height: 100vh;
+  background: var(--cream);
+}
+
+.dashboard-container {
+  padding-top: 5rem;
+}
+
+.active-delivery-section {
+  margin-bottom: 3rem;
+}
+
+.active-delivery-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+}
+
+.active-delivery-card {
+  background: var(--white);
+  border: 2px solid var(--saffron);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 16px rgba(212,112,10,0.1);
+}
+
+.delivery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(92,58,30,0.1);
+}
+
+.order-id-large {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-mid);
+  font-family: 'Nunito Sans', monospace;
+  margin-bottom: 6px;
+}
+
+.customer-name-large {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.delivery-amount {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--saffron);
+}
+
+.delivery-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.info-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.info-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: var(--saffron-pale);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--saffron);
+  flex-shrink: 0;
+}
+
+.info-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-light);
+  margin-bottom: 4px;
+}
+
+.info-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+  line-height: 1.4;
+}
+
+.delivery-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.delivery-actions button {
+  flex: 1;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.btn-navigate {
+  background: var(--cream);
+  color: var(--text-dark);
+  border: 1px solid rgba(92,58,30,0.2);
+}
+
+.btn-navigate:hover {
+  background: var(--cream-dark);
+}
+
+.btn-complete {
+  background: var(--green);
+  color: white;
+}
+
+.btn-complete:hover {
+  background: var(--green-light);
+}
+
+.available-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+}
+
+.delivery-card {
+  background: var(--white);
+  border: 1px solid rgba(92,58,30,0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.delivery-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(92,58,30,0.12);
+}
+
+.delivery-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.zone-badge {
+  background: var(--green-pale);
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.delivery-card-body {
+  margin-bottom: 1.2rem;
+}
+
+.delivery-distance {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  color: var(--text-mid);
+  margin-top: 8px;
+}
+
+.delivery-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(92,58,30,0.1);
+}
+
+.delivery-earning {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--green);
+  font-family: 'Playfair Display', serif;
+}
+
+.btn-accept-delivery {
+  background: var(--saffron);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-accept-delivery:hover {
+  background: var(--brown);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .active-delivery-card {
+    padding: 1.5rem;
+  }
+
+  .delivery-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .delivery-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .delivery-actions {
+    flex-direction: column;
+  }
+
+  .delivery-card-footer {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .btn-accept-delivery {
+    width: 100%;
+  }
+}

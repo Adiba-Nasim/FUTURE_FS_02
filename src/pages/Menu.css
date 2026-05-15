@@ -1,0 +1,329 @@
+.menu-page {
+  min-height: 100vh;
+  background: var(--cream);
+}
+
+.menu-hero {
+  background: var(--white);
+  text-align: center;
+  padding: 4rem 2rem 3rem;
+  border-bottom: 1px solid rgba(92,58,30,0.1);
+}
+
+.menu-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.8rem;
+}
+
+.menu-hero p {
+  font-size: 16px;
+  color: var(--text-mid);
+  font-family: 'Lora', serif;
+}
+
+.menu-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.menu-filters {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: var(--white);
+  color: var(--text-mid);
+  border: 1px solid rgba(92,58,30,0.15);
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Nunito Sans', sans-serif;
+  transition: all 0.2s;
+}
+
+.filter-btn:hover {
+  border-color: var(--saffron);
+  color: var(--saffron);
+}
+
+.filter-btn.active {
+  background: var(--saffron);
+  color: white;
+  border-color: var(--saffron);
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.menu-card {
+  background: var(--white);
+  border: 1px solid rgba(92,58,30,0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.menu-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(92,58,30,0.12);
+}
+
+/* ── Card image area — supports both real img and emoji fallback ── */
+.menu-card-img {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  background: var(--saffron-pale);
+}
+
+/* Real photo */
+.menu-real-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.menu-card:hover .menu-real-img {
+  transform: scale(1.05);
+}
+
+/* Emoji fallback — shown only when image fails */
+.menu-emoji {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 64px;
+}
+
+.leaf-tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--green-pale);
+  border: 1px solid rgba(58,107,53,0.25);
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 10px;
+  color: var(--green);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  /* ensure tag sits above the photo */
+  z-index: 1;
+}
+
+.menu-card-body {
+  padding: 1.3rem;
+}
+
+.menu-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.menu-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.veg-badge {
+  font-size: 11px;
+  color: var(--green);
+  font-weight: 600;
+  background: var(--green-pale);
+  border-radius: 4px;
+  padding: 3px 8px;
+  white-space: nowrap;
+}
+
+.non-veg-badge {
+  font-size: 11px;
+  color: #c0392b;
+  font-weight: 600;
+  background: #fdecea;
+  border-radius: 4px;
+  padding: 3px 8px;
+  white-space: nowrap;
+}
+
+.menu-desc {
+  font-size: 13px;
+  color: var(--text-light);
+  line-height: 1.55;
+  margin-bottom: 1rem;
+}
+
+.menu-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-price {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--saffron);
+  font-family: 'Playfair Display', serif;
+}
+
+.add-btn {
+  background: var(--saffron);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s;
+}
+
+.add-btn:hover {
+  background: var(--brown);
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--cream);
+  border-radius: 6px;
+  padding: 4px;
+}
+
+.quantity-controls button {
+  background: var(--saffron);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.quantity-controls button:hover {
+  background: var(--brown);
+}
+
+.quantity-controls span {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-dark);
+  min-width: 24px;
+  text-align: center;
+}
+
+/* ── CART SUMMARY ───────────────────────────────────────────────── */
+.cart-summary {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--white);
+  border-top: 1px solid rgba(92,58,30,0.15);
+  box-shadow: 0 -4px 24px rgba(92,58,30,0.1);
+  z-index: 90;
+}
+
+.cart-summary-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.2rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.cart-divider {
+  color: var(--text-light);
+}
+
+.cart-total {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: var(--saffron);
+}
+
+.checkout-btn {
+  background: var(--saffron);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Nunito Sans', sans-serif;
+  transition: background 0.2s;
+}
+
+.checkout-btn:hover {
+  background: var(--brown);
+}
+
+/* ── RESPONSIVE ─────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .menu-hero h1 {
+    font-size: 32px;
+  }
+
+  .menu-container {
+    padding: 2rem 1rem;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-card-img {
+    height: 200px; /* slightly taller on mobile for better photo display */
+  }
+
+  .cart-summary-content {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .checkout-btn {
+    width: 100%;
+  }
+}
