@@ -6,7 +6,7 @@ export default function Footer({ id }) {
      <footer className="footer" id={id}>
       <div className="footer-grid">
         <div>
-          <div className="footer-brand-emp_name">Mother's Touch Tiffin</div>
+          <div className="footer-brand-name">Mother's Touch Tiffin</div>
           <div className="footer-brand-tagline">
             Homemade food delivered by women who care, packed in banana leaf, priced for everyone.
           </div>
