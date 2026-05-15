@@ -14,36 +14,25 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/login" element={<Auth />} />
-
-        {/* Public routes */}
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<Menu />} />
-
-        {/* /checkout → checkout form (no :id, so useParams gives undefined) */}
         <Route path="/checkout" element={<Order />} />
-
-        {/* /order/:id → tracking page only, reached after order placed */}
         <Route path="/order/:id" element={<Order />} />
-
-        {/* User profile */}
         <Route path="/profile" element={
           <ProtectedRoute allowedRoles={['customer', 'cook', 'delivery', 'admin']}>
             <Profile />
           </ProtectedRoute>
         } />
-
         <Route path="/cook/dashboard" element={
           <ProtectedRoute allowedRoles={['cook']}>
-            <CookDashboard />
+            <Cookdashboard />
           </ProtectedRoute>
         } />
-
         <Route path="/delivery/dashboard" element={
           <ProtectedRoute allowedRoles={['delivery']}>
-            <DeliveryDashboard />
+            <Deliverydashboard />
           </ProtectedRoute>
         } />
-
         <Route path="/admin" element={
           <ProtectedRoute allowedRoles={['admin']}>
             <AdminPanel />
