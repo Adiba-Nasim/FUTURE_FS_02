@@ -174,7 +174,7 @@ export default function CookDashboard() {
                 alignSelf: 'center'
               }}
             >
-              {cook?.is_available ? '🟢 Available' : '🔴 Unavailable'}
+              {cook?.is_available ? 'Available' : 'Unavailable'}
             </button>
           </div>
         </div>

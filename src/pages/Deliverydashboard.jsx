@@ -123,20 +123,23 @@ export default function DeliveryDashboard() {
             <p className="welcome-text">Welcome, {partnername}</p>
           </div>
           <div className="cook-stats">
-            
             <div className="stat-box">
               <div className="stat-value">{partnerProfile?.zone ?? '—'}</div>
               <div className="stat-label">Zone</div>
             </div>
             <div className="stat-box">
               <div className="stat-value">
-                {partnerProfile?.rating ? ` ${partnerProfile.rating}` : '—'}
+                {partnerProfile?.rating ?? '—'}
               </div>
-              <div className="stat-label">⭐Rating</div>
+              <div className="stat-label">⭐ Rating</div>
             </div>
             <div className="stat-box">
-              <div className="stat-value">{partnerProfile?.is_available ? '🟢 Online' : '🔴 Offline'}</div>
-              <div className="stat-label">Status</div>
+              <div className={`stat-box ${partnerProfile?.is_available ? 'status-online' : 'status-offline'}`}>
+                <div className="stat-value">
+                  {partnerProfile?.is_available ? 'Online' : 'Offline'}
+                </div>
+                <div className="stat-label">Status</div>
+              </div>
             </div>
           </div>
         </div>

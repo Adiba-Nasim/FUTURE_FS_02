@@ -249,3 +249,84 @@
     width: 100%;
   }
 }
+/* Add at the bottom of Deliverydashboard.css */
+
+@media (max-width: 600px) {
+  .dashboard-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .dashboard-header h1 {
+    font-size: 24px;
+  }
+
+  .cook-stats {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .stat-box {
+    min-width: unset;
+    padding: 0.6rem 0.4rem;
+  }
+
+  .stat-value {
+    font-size: 13px;
+    word-break: break-word;
+  }
+
+  .active-delivery-card {
+    padding: 1.2rem;
+  }
+
+  .delivery-amount {
+    font-size: 24px;
+  }
+
+  .customer-name-large {
+    font-size: 18px;
+  }
+
+  .orders-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .delivery-card-footer {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  .btn-accept-delivery {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.stat-box.status-online {
+  background: #e6f9f0;
+  border-color: #1e9e5a;
+}
+
+.stat-box.status-offline {
+  background: #fdecea;
+  border-color: #c0392b;
+}
+
+.stat-box.status-online .stat-value,
+.stat-box.status-online .stat-label {
+  color: #1e9e5a;
+}
+
+.stat-box.status-offline .stat-value,
+.stat-box.status-offline .stat-label {
+  color: #c0392b;
+}
