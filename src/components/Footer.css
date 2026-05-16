@@ -89,3 +89,40 @@
 .footer-link-btn:hover {
   color: var(--saffron-light);
 }
+
+/* Add to your existing footer CSS */
+
+@media (max-width: 900px) {
+  .footer {
+    padding: 2.5rem 2rem 1.5rem;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  /* Brand column spans full width on tablet */
+  .footer-grid > *:first-child {
+    grid-column: 1 / -1;
+  }
+  .footer-brand-tagline {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 2rem 1.25rem 1.25rem;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+  .footer-bottom-right {
+    gap: 0.8rem;
+  }
+}
